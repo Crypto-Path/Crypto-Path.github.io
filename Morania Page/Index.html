@@ -1,0 +1,144 @@
+<html>
+	<head>
+		<title>Morania</title>
+	</head>
+	<body style="background-color:#707070;">
+		<div style="width:98.75%;height:33%;background-color:#808080;border-radius:10px;display:none;opacity: 0.95;">
+			<div>
+				<a>
+					<font>
+					</font>
+				</a>
+			</div>
+			<div id="371" style="width:98.75%;height:6%;background-color:#909090;border-radius:10px;float:left;margin:0.5%;text-align:center;position:relative;">
+			^^^
+			</div>
+		</div>
+	</body>
+	<script>
+		var body = document.getElementsByTagName("body")[0];
+		var catagoryContainer = document.createElement("div");
+		
+		var menu = null;
+		
+		body.appendChild(catagoryContainer);
+		catagoryContainer.style.width="100%"
+		catagoryContainer.style.height="4%"
+		catagoryContainer.style.backgrouondColor="#909090"
+		
+		var ID = 0;
+		
+		body.style.userSelect = "none";
+		
+		makeCatagory('Moranianary',"2",'Beastionary','Morania-Beastionary.html','Weaponary (N/A)',null);
+		makeCatagory('Leaderboard',"3",'Levels (N/A)',null,'Play-time (N/A)',null,'User-skill (N/A)',null);
+		makeCatagory('Main',"3",'Menu','Index.html','Profile','Morania-Profile.html','Download (N/A)',null);
+		function makeCatagory(name,amount,option1,location1,option2,location2,option3,location3,option4,location4) {
+		
+		var Div = document.createElement("div");
+		var TextContainerHolder = document.createElement("div");
+		var TextContainer = document.createElement("a");
+		var Text = document.createElement("font");
+			
+			Text.innerHTML=name;
+			
+			TextContainerHolder.style.padding='5%';
+			TextContainerHolder.style.margin='left';
+			
+			Div.id=ID;
+			Div.style.float = "left";
+			Div.style.backgroundColor='#808080';
+			Div.style.width=100/8-1+"%";
+			Div.style.textAlign='center';
+			Div.style.margin='0.5%';
+			Div.style.borderRadius = "10px";
+			
+			catagoryContainer.appendChild(Div);
+			Div.appendChild(TextContainerHolder);
+			TextContainerHolder.appendChild(TextContainer);
+			TextContainer.appendChild(Text);
+			
+			document
+			.getElementById(ID)
+			.addEventListener("click", function( event ) {
+				dropDown(amount,option1,location1,option2,location2,option3,location3,option4,location4);
+			}, false)
+			ID++;
+		}
+		function dropDown(amount,option1,location1,option2,location2,option3,location3,option4,location4) {
+			var menu = document.getElementsByTagName("div")[0];
+			
+			var holder = menu.getElementsByTagName("div")[0];
+			var content = menu.getElementsByTagName("div")[0].getElementsByTagName("a")[0].getElementsByTagName("font")[0];
+			
+			menu.style.display="block";
+			
+			holder.style.margin='0.5%';
+			holder.style.float='left';
+			holder.style.paddingRight='0.5%';
+			holder.style.paddingLeft='0.5%';
+			holder.style.backgroundColor='#909090';
+			holder.style.borderRadius='10px';
+			holder.style.width='98%';
+			holder.style.height='80%';
+			
+			content.innerHTML="";
+			
+			if (amount == "4")
+				content.innerHTML+="<a href='"+location1+"'>"+option1+"</a>"+"<br>"+"<a href='"+location2+"'>"+option2+"</a>"+"<br>"+"<a href='"+location3+"'>"+option3+"</a>"+"<br>"+"<a href='"+location4+"'>"+option4+"</a>"+"<br>";
+			else if (amount == "3")
+				content.innerHTML+="<a href='"+location1+"'>"+option1+"</a>"+"<br>"+"<a href='"+location2+"'>"+option2+"</a>"+"<br>"+"<a href='"+location3+"'>"+option3+"</a>";
+			else if (amount == "2")
+				content.innerHTML+="<a href='"+location1+"'>"+option1+"</a>"+"<br>"+"<a href='"+location2+"'>"+option2+"</a>";
+			else if (amount == "1")
+				content.innerHTML+="<a href='"+location1+"'>"+option1+"</a>";
+		}
+		function close(){
+			var menu = document.getElementsByTagName("div")[0];
+
+			menu.style.display = "none";
+		}
+		document
+			.getElementById("371")
+			.addEventListener("click", function( event ) {
+				close();
+			}, false)
+			
+		function createGroup(title,desc) {
+			var GroupHolder = document.getElementById("Callings");
+		
+			var MainHolder = document.createElement("div");
+			var TitleHolder = document.createElement("h3");
+			var DescHolder = document.createElement("div");
+			var Desc = document.createElement("p");
+			
+			MainHolder.style.backgroundColor = "#909090";
+			MainHolder.style.borderRadius = "10px";
+			MainHolder.style.textAlign = "center";
+			
+			TitleHolder.innerHTML = "["+title+"]";
+			
+			DescHolder.style.backgroundColor = "#9f9f9f";
+			DescHolder.style.borderRadius = "10px";
+			DescHolder.style.textAlign = "center";
+			
+			Desc.innerHTML= desc;
+			
+			GroupHolder.appendChild(MainHolder);
+			MainHolder.appendChild(TitleHolder);
+			MainHolder.appendChild(DescHolder);
+			DescHolder.appendChild(Desc);
+		} 
+	</script>
+	<body>
+		<div id="Callings" style="width:37%;background-color:#808080;border-radius:10px;text-align:center;">
+			<h1>Morania</h1>
+		</div>
+	</body>
+	<script>
+		createGroup("Plans for Morania",
+		"Morania plans to be a mmorpg with advanced combat that relys mostly on user skill other than the normal leveling system. if you were just thrown into another world with with goblins and ghouls you wouldnt just be able to kill 37,159 rats and start 1 shotting gods, you may be tougher than you were when you started but not by much. The hard difficulty and the advanced combat make this game more suttable to multiplayer but for you massochists there is singleplayer, in multi there will be a party system where you can sort out your party and say who will do what... or... just... Group up and hit it till it dies...");
+		createGroup("How to Help","You can help this project by, Donating, Joining the discord, suggesting ideas,");
+		createGroup("Advanced Combat","For the Advanced Combat you click in the direction you want to attack, right click in the direction you want to block and middle click to roll these are the basics there are also skills that users can use but take a long time to learn and get good at using during combat (most enemys and boss cant be defeated by just attacking blocking and dodging(or else every enemy will be like a dark sould boss and bosses will just be impossible))");
+	</script>
+</html>
