@@ -48,7 +48,7 @@
 			Div.id=ID;
 			Div.style.float = "left";
 			Div.style.backgroundColor='#808080';
-			Div.style.width=100/8-1+"%";
+			Div.style.width=100/3-1+"%";
 			Div.style.textAlign='center';
 			Div.style.margin='0.5%';
 			Div.style.borderRadius = "10px";
@@ -128,17 +128,54 @@
 			MainHolder.appendChild(TitleHolder);
 			MainHolder.appendChild(DescHolder);
 			DescHolder.appendChild(Desc);
+		} 	
+		function createUpdate(UpdateTitle,Ver,Info) {
+			var GroupHolder = document.getElementById("Callings2");
+			
+			var MainHolder = document.createElement("div");
+			var TitleHolder = document.createElement("h3");
+			var DescHolder = document.createElement("div");
+			var Desc = document.createElement("p");
+			
+			MainHolder.style.backgroundColor = "#909090";
+			MainHolder.style.borderRadius = "10px";
+			MainHolder.style.textAlign = "center";
+			
+			TitleHolder.innerHTML = "["+UpdateTitle+"]"+"<br>"+"(Ver."+Ver+")";
+			
+			DescHolder.style.backgroundColor = "#9f9f9f";
+			DescHolder.style.borderRadius = "10px";
+			DescHolder.style.textAlign = "left";
+			
+			Desc.innerHTML= Info;
+			
+			GroupHolder.appendChild(MainHolder);
+			MainHolder.appendChild(TitleHolder);
+			MainHolder.appendChild(DescHolder);
+			DescHolder.appendChild(Desc);
 		} 
 	</script>
 	<body>
-		<div id="Callings" style="width:37%;background-color:#808080;border-radius:10px;text-align:center;">
-			<h1>Morania</h1>
+		<div>
+			<div id="Callings" style="width:37%;height:auto;background-color:#808080;border-radius:10px;text-align:center;float:left;margin:1%;">
+				<h1>Morania</h1>
+			</div>
+			<div id="Callings2" style="width:37%;height:75%;background-color:#808080;border-radius:10px;text-align:center;float:left;margin:1%;">
+				<h1>Updates</h1>
+			</div>
 		</div>
 	</body>
 	<script>
-		createGroup("Plans for Morania",
-		"Morania plans to be a mmorpg with advanced combat that relys mostly on user skill other than the normal leveling system. if you were just thrown into another world with with goblins and ghouls you wouldnt just be able to kill 37,159 rats and start 1 shotting gods, you may be tougher than you were when you started but not by much. The hard difficulty and the advanced combat make this game more suttable to multiplayer but for you massochists there is singleplayer, in multi there will be a party system where you can sort out your party and say who will do what... or... just... Group up and hit it till it dies...");
-		createGroup("How to Help","You can help this project by, Donating, Joining the discord, suggesting ideas,");
+		var Caller1 = document.getElementById("Callings");
+		var Caller2 = document.getElementById("Callings2");
+		Caller1.style.overflowY = "scroll";
+		Caller2.style.overflowY = "scroll";
+		createGroup("Plans for Morania", "Morania plans to be a mmorpg with advanced combat that relys mostly on user skill other than the normal leveling system. if you were just thrown into another world with with goblins and ghouls you wouldnt just be able to kill 37,159 rats and start 1 shotting gods, you may be tougher than you were when you started but not by much. The hard difficulty and the advanced combat make this game more suttable to multiplayer but for you massochists there is singleplayer, in multi there will be a party system where you can sort out your party and say who will do what... or... just... Group up and hit it till it dies...");
+		createGroup("How to Help","You can help this project by, Donating (Not available at the moment), Joining the <font href='https://discord.gg/ykfZTtfQ'>discord</font>, tell others about this project");
 		createGroup("Advanced Combat","For the Advanced Combat you click in the direction you want to attack, right click in the direction you want to block and middle click to roll these are the basics there are also skills that users can use but take a long time to learn and get good at using during combat (most enemys and boss cant be defeated by just attacking blocking and dodging(or else every enemy will be like a dark sould boss and bosses will just be impossible))");
+		
+		createUpdate("Main-Webpage","W:0.1.1B","Added:<br><br>- Updates<br>-- Update:shows what got updated (website, game, etc.)<br><br>Changed:<br><br>- Beastionary:<br>-- Default Image is now a ? instead of text saying pfp with a grey background");
+		createUpdate("Main-Webpage + Beastionary","W:0.1.0B","Added:<br><br>- Beastionary:<br>-- ~40 Beasts<br><br>- Login page:<br>-- can't create a account yet it's just the basic outline right now<br><br>- Groups<br>-- shows basic info for morania");
+		createUpdate("Main-Webpage","W:0.0.0B","Nothing existed yet ;p");
 	</script>
 </html>
