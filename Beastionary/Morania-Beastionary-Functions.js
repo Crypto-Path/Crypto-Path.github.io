@@ -9,7 +9,7 @@ function addBeast(name,CTV,IMG,Class,Desc,HP,ATK,DEF,Ability,Drops,Rarity) {
 	
 	Image.src = IMG;
 	Image.style.margin = "auto";
-	Image.style.borderRadius = "5px";
+	Image.style.borderRadius = "20px";
 	//Image.id = ID+1000;
 	
 	Name.innerHTML = name;
@@ -27,7 +27,7 @@ function addBeast(name,CTV,IMG,Class,Desc,HP,ATK,DEF,Ability,Drops,Rarity) {
 	Div.style.fontSize = "12px";
 	//Div.style.fontSize = "75%";
 	Div.style.textAlign = "center";
-	Div.style.borderRadius = "10px";
+	Div.style.borderRadius = "20px";
 	Div.style.cursor = "pointer";
 	Div.style.position = "relative";
 	
@@ -80,8 +80,8 @@ function addBeast(name,CTV,IMG,Class,Desc,HP,ATK,DEF,Ability,Drops,Rarity) {
 		.addEventListener("mouseover", function( event ) {
 			var Beast = Div
 			var BeastIMG = Image
-			Beast.style.borderRadius = "20px";
-			BeastIMG.style.borderRadius = "20px";
+			Beast.style.borderRadius = "10px";
+			BeastIMG.style.borderRadius = "10px";
 			
 			//Beast.style.width = "6%";
 			//Beast.style.height = "22%";
@@ -93,8 +93,8 @@ function addBeast(name,CTV,IMG,Class,Desc,HP,ATK,DEF,Ability,Drops,Rarity) {
 				//.getElementById(ID)
 				Div
 				.addEventListener("mouseout", function( event ) {
-					Beast.style.borderRadius = "10px";
-					BeastIMG.style.borderRadius = "10px";
+					Beast.style.borderRadius = "20px";
+					BeastIMG.style.borderRadius = "20px";
 					//Beast.style.width = "5%";
 					Image.style.height = "35%";
 				}, 

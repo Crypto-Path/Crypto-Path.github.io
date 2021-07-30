@@ -32,7 +32,7 @@
 		
 		makeCatagory('Moranianary',"2",'Beastionary','Morania-Beastionary.html','Weaponary (N/A)',null);
 		makeCatagory('Leaderboard',"3",'Levels (N/A)',null,'Play-time (N/A)',null,'User-skill (N/A)',null);
-		makeCatagory('Main',"3",'Menu','https://morania.online/','Profile','Morania-Profile.html','Download (N/A)',null);
+		makeCatagory('Main',"3",'Menu','index.html','Profile','Morania-Profile.html','Download (N/A)',null);
 		function makeCatagory(name,amount,option1,location1,option2,location2,option3,location3,option4,location4) {
 		
 		var Div = document.createElement("div");
@@ -129,7 +129,7 @@
 			MainHolder.appendChild(DescHolder);
 			DescHolder.appendChild(Desc);
 		} 	
-		function createUpdate(UpdateTitle,Ver,Info) {
+		function createUpdate(UpdateTitle,Ver,Info,date) {
 			var GroupHolder = document.getElementById("Callings2");
 			
 			var MainHolder = document.createElement("div");
@@ -141,7 +141,7 @@
 			MainHolder.style.borderRadius = "10px";
 			MainHolder.style.textAlign = "center";
 			
-			TitleHolder.innerHTML = "["+UpdateTitle+"]"+"<br>"+"(Ver."+Ver+")";
+			TitleHolder.innerHTML = "["+UpdateTitle+"]"+"<br>"+"(Ver."+Ver+")"+"<br>"+"(Date:"+date+")";
 			
 			DescHolder.style.backgroundColor = "#9f9f9f";
 			DescHolder.style.borderRadius = "10px";
@@ -156,11 +156,28 @@
 		} 
 	</script>
 	<body>
+		<style>
+		::-webkit-scrollbar {
+		  width: 10px;
+			border-radius:10px;
+		}
+		  ::-webkit-scrollbar-track {
+		  background: #808080; 
+		}
+		  ::-webkit-scrollbar-thumb {
+		  background: #606060; 
+			border-radius:10px;
+		}
+		::-webkit-scrollbar-thumb:hover {
+		  
+		  background: #404040; 
+		} 
+		</style>
 		<div>
-			<div id="Callings" style="width:37%;height:75%;background-color:#808080;border-radius:10px;text-align:center;float:left;margin:1%;">
+			<div id="Callings" style="width:37%;height:85%;background-color:#808080;border-radius:10px;text-align:center;float:left;margin:1%;">
 				<h1>Morania</h1>
 			</div>
-			<div id="Callings2" style="width:37%;height:75%;background-color:#808080;border-radius:10px;text-align:center;float:left;margin:1%;">
+			<div id="Callings2" style="width:37%;height:85%;background-color:#808080;border-radius:10px;text-align:center;float:left;margin:1%;">
 				<h1>Updates</h1>
 			</div>
 		</div>
@@ -170,12 +187,13 @@
 		var Caller2 = document.getElementById("Callings2");
 		Caller1.style.overflowY = "scroll";
 		Caller2.style.overflowY = "scroll";
-		createGroup("Plans for Morania", "Morania plans to be a mmorpg with advanced combat that relys mostly on user skill other than the normal leveling system. if you were just thrown into another world with with goblins and ghouls you wouldnt just be able to kill 37,159 rats and start 1 shotting gods, you may be tougher than you were when you started but not by much. The hard difficulty and the advanced combat make this game more suttable to multiplayer but for you massochists there is singleplayer, in multi there will be a party system where you can sort out your party and say who will do what... or... just... Group up and hit it till it dies...");
-		createGroup("How to Help","You can help this project by, Donating (Not available at the moment), Joining the <font href='https://discord.gg/ykfZTtfQ'>discord</font>, tell others about this project");
-		createGroup("Advanced Combat","For the Advanced Combat you click in the direction you want to attack, right click in the direction you want to block and middle click to roll these are the basics there are also skills that users can use but take a long time to learn and get good at using during combat (most enemys and boss cant be defeated by just attacking blocking and dodging(or else every enemy will be like a dark sould boss and bosses will just be impossible))");
+		createGroup("Plans for Morania", "Morania plans to be a MMORPG with Advanced Combat that relys mostly on user skill other than the normal leveling system. if you were just thrown into another world with with goblins and ghouls you wouldnt just be able to kill 37,159 rats and start 1 shotting gods, you may be tougher than you were when you started but not by much. The hard difficulty and the advanced combat make this game more suttable to multiplayer but for you massochists there is singleplayer, in multi there will be a party system where you can sort out your party and say who will do what... or... just... Group up and hit it till it dies...");
+		createGroup("How to Help","You can help this project by, Donating (Not available at the moment), Joining the <a href='https://discord.gg/ykfZTtfQ'>Discord</a>, tell others about this project");
+		createGroup("Advanced Combat","For the Advanced Combat you click in the direction you want to attack, right click in the direction you want to block, and middle click to roll. the 3 main combat options are the basics there are also skills that users can use. skills will take a long time to learn and get good at using during combat (most enemys and boss cant be defeated by just attacking blocking and dodging(or else every enemy will be like a dark souls boss and bosses will just be impossible))");
 		
-		createUpdate("Main-Webpage","W:0.1.1B","Added:<br><br>- Updates<br>-- Update:shows what got updated (website, game, etc.)<br><br>Changed:<br><br>- Beastionary:<br>-- Default Image is now a ? instead of text saying pfp with a grey background");
-		createUpdate("Main-Webpage + Beastionary","W:0.1.0B","Added:<br><br>- Beastionary:<br>-- ~40 Beasts<br><br>- Login page:<br>-- can't create a account yet it's just the basic outline right now<br><br>- Groups<br>-- shows basic info for morania");
-		createUpdate("Main-Webpage","W:0.0.0B","Nothing existed yet ;p");
+		createUpdate("Main-Webpage","W:0.1.3B","Added:<br><br>- Update dates:<br>-- now show the date an update was made<br><br>Changed:<br><br>- Scrollbar:<br>-- now fance grey rounded scroll bar instead of default html scroll bar<br><br>-beastionary hover effect:<br>-- now expands instead of shrinks<br><br>- Fixed random typos:<br>-- there are probably still more :/<br><br>- Longer group/update holders<br><br>Future update plan:<br><br>- Option to change between game updates adn website update<br>- darkmode/lightmode<br>- more optimized loading of beasts in beastionary","7.29.21");
+		createUpdate("Main-Webpage","W:0.1.1B","Added:<br><br>- Updates:<br>-- Update:shows what got updated (website, game, etc.)<br><br>Changed:<br><br>- Beastionary:<br>-- Default Image is now a ? instead of text saying pfp with a grey background<br><br>- Bigger buttons at top of page","7.28.21");
+		createUpdate("Main-Webpage + Beastionary","W:0.1.0B","Added:<br><br>- Beastionary:<br>-- ~40 Beasts<br><br>- Login page:<br>-- can't create a account yet it's just the basic outline right now<br><br>- Groups<br>-- shows basic info for morania","7.26.21");
+		createUpdate("Main-Webpage","W:0.0.0B","Nothing existed yet ;p","7.26.21");
 	</script>
 </html>
