@@ -1,6 +1,6 @@
 body.style.userSelect = "none";
 
-monsterHolder.style.width = "82.5%";
+monsterHolder.style.width = "83%";
 monsterHolder.style.height = "100%";
 monsterHolder.style.overflowY = "scroll";
 monsterHolder.style.float = "left";
