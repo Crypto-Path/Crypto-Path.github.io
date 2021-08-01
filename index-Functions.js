@@ -114,7 +114,66 @@ function createGroup(title, desc) {
 }
 
 function createUpdate(UpdateTitle, Ver, added, changed, plan, date) {
+    var hidden = true;
     var GroupHolder = document.getElementById("Callings2");
+
+    var MainHolder = document.createElement("div");
+    var TitleHolder = document.createElement("h3");
+    var DescHolder = document.createElement("div");
+    var Added = document.createElement("p");
+    var Changed = document.createElement("p");
+    var Plan = document.createElement("p");
+
+    MainHolder.style.backgroundColor = "#909090";
+    MainHolder.style.borderRadius = "10px";
+    MainHolder.style.textAlign = "center";
+    MainHolder.style.cursor = 'pointer';
+
+    TitleHolder.innerHTML = "[" + UpdateTitle + "]" + "<br>" + "(Ver." + Ver + ")" + "<br>" + "(Date:" + date + ")";
+
+    DescHolder.style.backgroundColor = "#9f9f9f";
+    DescHolder.style.borderRadius = "10px";
+    DescHolder.style.textAlign = "left";
+
+    Added.innerHTML = "<div style='background-color:#959595;'>Added:</div><br><br>" + added + "<br><br>";
+    Changed.innerHTML = "<div style='background-color:#959595;'>Changed:</div><br><br>" + changed + "<br><br>";
+    Plan.innerHTML = "<div style='background-color:#959595;'>Furture Update Plan:</div><br><br>" + plan + "<br><br>";
+
+    GroupHolder.appendChild(MainHolder);
+    MainHolder.appendChild(TitleHolder);
+    MainHolder.appendChild(DescHolder);
+    DescHolder.appendChild(Added);
+    DescHolder.appendChild(Changed);
+    DescHolder.appendChild(Plan);
+    document
+    MainHolder
+        .addEventListener("click", function(event) {
+            hidden = !hidden;
+            if (hidden) {
+                DescHolder.style.display = 'block';
+            } else if (!hidden) {
+                DescHolder.style.display = 'none';
+            }
+        }, false)
+    document
+    MainHolder
+        .addEventListener("mouseover", function(event) {
+
+                MainHolder.style.backgroundColor = "#606060";
+
+                document
+                MainHolder
+                    .addEventListener("mouseout", function(event) {
+                            MainHolder.style.backgroundColor = "#909090";
+                        },
+                        false)
+            },
+            false)
+}
+
+function createGameUpdate(UpdateTitle, Ver, added, changed, plan, date) {
+    var hidden = true;
+    var GroupHolder = document.getElementById("Callings3");
 
     var MainHolder = document.createElement("div");
     var TitleHolder = document.createElement("h3");
@@ -143,32 +202,31 @@ function createUpdate(UpdateTitle, Ver, added, changed, plan, date) {
     DescHolder.appendChild(Added);
     DescHolder.appendChild(Changed);
     DescHolder.appendChild(Plan);
-}
 
-function createGameUpdate(UpdateTitle, Ver, Info, date) {
-    var GroupHolder = document.getElementById("Callings3");
+    document
+    MainHolder
+        .addEventListener("click", function(event) {
+            hidden = !hidden;
+            if (hidden) {
+                DescHolder.style.display = 'block';
+            } else if (!hidden) {
+                DescHolder.style.display = 'none';
+            }
+        }, false)
+    document
+    MainHolder
+        .addEventListener("mouseover", function(event) {
 
-    var MainHolder = document.createElement("div");
-    var TitleHolder = document.createElement("h3");
-    var DescHolder = document.createElement("div");
-    var Desc = document.createElement("p");
+                MainHolder.style.backgroundColor = "#606060";
 
-    MainHolder.style.backgroundColor = "#909090";
-    MainHolder.style.borderRadius = "10px";
-    MainHolder.style.textAlign = "center";
-
-    TitleHolder.innerHTML = "[" + UpdateTitle + "]" + "<br>" + "(Ver." + Ver + ")" + "<br>" + "(Date:" + date + ")";
-
-    DescHolder.style.backgroundColor = "#9f9f9f";
-    DescHolder.style.borderRadius = "10px";
-    DescHolder.style.textAlign = "left";
-
-    Desc.innerHTML = Info;
-
-    GroupHolder.appendChild(MainHolder);
-    MainHolder.appendChild(TitleHolder);
-    MainHolder.appendChild(DescHolder);
-    DescHolder.appendChild(Desc);
+                document
+                MainHolder
+                    .addEventListener("mouseout", function(event) {
+                            MainHolder.style.backgroundColor = "#909090";
+                        },
+                        false)
+            },
+            false)
 }
 
 function Switch(update) {
