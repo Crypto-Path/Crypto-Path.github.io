@@ -1,165 +1,176 @@
-<html>
-
-<head lang="en">
-
-    <meta http-equiv="content-language" content="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="morania, schiytu37,">
-    <meta name="description" content="This short description describes my website.">
-
-    <title>Morania</title>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Max Ellis - Cyphe Mercury</title>
+	<link rel="stylesheet" href="style.css">
 </head>
+<body class="background">
+	<header>
+		<h1>Max Ellis</h1>
+		<p class="subtitle">AKA Cyphe Mercury, Schiytu37, and Crypto-Path</p>
+		<nav>
+            <ul>
+                <li><a href="#about-me" onclick="scrollToSection('about-me')">About Me</a></li>
+                <li><a href="#achievements" onclick="scrollToSection('achievements')">Achievements</a></li>
+                <li><a href="#my-sites" onclick="scrollToSection('my-sites')">My Sites</a></li>
+            </ul>
+            <br>
+            <ul>
+                <li><a href="#flw" onclick="scrollToSection('flw')">4-Letter Words</a></li>
+                <li><a href="#prosody" onclick="scrollToSection('prosody')">Prosody</a></li>
+            </ul>
+          </nav>
+	</header>
 
-<body style="background-color:#707070;">
-    <div style="width:98.75%;height:33%;background-color:#808080;border-radius:10px;display:none;opacity: 0.85;top:12.5%">
-        <div>
-            <a>
-                <font>
-                </font>
+	<main>
+		<section id="about-me">
+            <h2>About Me</h2>
+            <p>
+                My name is Max Ellis, but online I go by Cyphe Mercury, Schiytu37, and sometimes Crypto-Path. I am a rhythm game addict who enjoys coding and developing new ideas.
+            </p>
+            <br>
+            <p>
+                Some of my interests and skills include:
+            </p>
+            <ul>
+                <li>Programming in C#, HTML/JS/CSS</li>
+                <li>Creating music in FL Studio</li>
+                <li>3D modeling in Blender</li>
+                <li>Writing and creating stories</li>
+            </ul>
+            <br>
+            <p>
+                My ultimate goal is to learn all the necessary skills needed to make games so that I can fill any role needed to help or make my own games and do it well.
+            </p>
+            <br>
+            <p>
+                In my free time, I also develop Prosody, a 4K VSRG, and manage its related Discord server.
+            </p>
+            <br>
+            <p>
+                If you want to connect with me or see some of my work, check out my GitHub page.
+            </p>
+            <br>
+            <a href="https://github.com/Crypto-Path" target="_blank">
+                <img class="placeholder-image" src="images/github.png" alt="Placeholder image">
             </a>
-        </div>
-        <div id="371" style="
-			width:98.75%;height:6%;background-color:#909090;border-radius:10px;float:left;margin:0.5%;text-align:center;position:relative;font-size:12px;cursor: pointer;">
-            [Hide Menu]
-        </div>
-    </div>
-</body>
-<script src="index-Functions.js"></script>
-<script>
-    var body = document.getElementsByTagName("body")[0];
-    var catagoryContainer = document.createElement("div");
+            <br>
+        </section>
 
-    var menu = null;
+        <section id="achievements" class="achievements">
+            <h2>Achievements</h2>
+            <ul>
+              <li>Competed in FBLA 2022-2023:</li>
+              <ul>
+                <li>In state got first place in Computer Game & Program Simulation</li>
+                <li>Also competed in Computer problem solving and placed within the top 10</li>
+              </ul>
+              <li>Rhythm Game:</li>
+              <ul>
+                <li>Top 2000 ranking in Quaver & 34pr play</li>
+                <li>osu! 5* fc & 150pp play</li>
+              </ul>
+            </ul>
+          </section>
 
-    body.appendChild(catagoryContainer);
-    catagoryContainer.style.width = "100%"
-    catagoryContainer.style.height = "4%"
-    catagoryContainer.style.backgrouondColor = "#909090"
+		<section id="my-sites" class="social-media">
+			<h2>My Sites</h2>
+			<h3>Social</h3>
+			<ul>
+				<li><a href="https://twitter.com/crypto_path"><img src="images/twitter.png" alt="Twitter icon"> Twitter</a></li>
+				<li><a href="https://discord.gg/ajWJNUHFq7"><img src="images/discord.png" alt="Discord icon"> Discord</a></li>
+			</ul>
+            <h3>Development</h3>
+            <ul>
+				<li><a href="https://github.com/Crypto-Path"><img src="images/github.png" alt="Github icon"> Github</a></li>
+				<li><a href="https://schiytu37.itch.io/"><img src="images/itchio.png" alt="Itch icon"> Itch</a></li>
+			</ul>
+            <h3>Production</h3>
+            <ul>
+				<li><a href="https://soundcloud.com/makyuri"><img src="images/soundcloud.png" alt="Soundcloud icon"> Soundcloud</a></li>
+			</ul>
+            <h3>Other</h3>
+            <ul>
+				<li><a href="http://cyphemercury.online/"><img src="images/Slime-Grass.jpg" alt="Prosody icon"> My Site</a></li>
+				<li><a href="http://cyphemercury.online/Aria-Engine-Prosody/"><img src="images/prosody.png" alt="Prosody icon"> Prosody</a></li>
+			</ul>
+		</section>
+    </main>
 
-    var ID = 0;
-
-    body.style.userSelect = "none";
-
-    makeCatagory('Moranianary', "2", 'Beastionary', 'Morania-Beastionary.html', 'Weaponary (N/A)', null);
-    makeCatagory('Leaderboard', "3", 'Levels (N/A)', null, 'Play-time (N/A)', null, 'User-skill (N/A)', null);
-    makeCatagory('Main', "3", 'Menu', 'index.html', 'Profile', 'Morania-Profile.html', 'Download (N/A)', null);
-</script>
-
-<body>
-    <style>
-         ::-webkit-scrollbar {
-            width: 10px;
-            border-radius: 10px;
-        }
-        
-         ::-webkit-scrollbar-track {
-            background: #808080;
-        }
-        
-         ::-webkit-scrollbar-thumb {
-            background: #606060;
-            border-radius: 10px;
-        }
-        
-         ::-webkit-scrollbar-thumb:hover {
-            background: #404040;
-        }
-    </style>
-    <div>
-        <div id="Callings" style="width:31.33%;height:85%;background-color:#808080;border-radius:10px;text-align:center;float:left;margin:1%;">
-            <h1>Morania</h1>
-        </div>
-        <div id="Callings2" style="width:31.33%;height:85%;background-color:#808080;border-radius:10px;text-align:center;float:right;margin:1%;">
-            <h1>Web-Updates</h1>
-            <div>
-                <div style="cursor:pointer;float:center;background-color:#606060;border-radius:10px">
-                    <a>
-							Website
-						</a>
-                </div>
-                <div id="switcher1" style="cursor:pointer;float:center;background-color:#909090;border-radius:10px" onclick="Switch('Game')">
-                    <a>
-							Game
-						</a>
-                </div>
+    <main>
+        <section id="flw">
+            <h2>4-Letter Words</h2>
+            <p>4-Letter Words is a word game developed by Cyphe Mercury.</p>
+            <p>Originally a joke that so many bad words are 4 letter words, 4-Letter words strives to help peaople discover new four letter words. These four letter words make you looks smarter now that you don't have to use the bad words to get your point across.</p>
+            <p>4-Letter Words features a local leaderboard, and fun gameplay. Inspiration was take from the Popcap game, "Book Worm"</p>
+            <div class="flw-images">
+              <img src="images/SCRNSHT1.png" alt="flw gameplay screenshot">
+              <img src="images/SCRNSHT2.png" alt="flw gameplay screenshot">
             </div>
-        </div>
-        <div id="Callings3" style="width:31.33%;height:85%;background-color:#808080;border-radius:10px;text-align:center;float:right;margin:1%;display:none;">
-            <h1>Game-Updates</h1>
-            <div>
-                <div id="switcher2" style="cursor:pointer;float:center;background-color:#909090;border-radius:10px" onclick="Switch('Web')">
-                    <a>
-							Website
-						</a>
-                </div>
-                <div style="cursor:pointer;float:center;background-color:#606060;border-radius:10px">
-                    <a>
-							Game
-						</a>
-                </div>
+            <div class="social-media">
+            <a href="https://schiytu37.itch.io/4-letter-words"><img src="images/Slime-Grass.jpg" alt="4-Letter Words icon"> 4-Letter Words</a>
+            <p>Made for 2023 FBLA Computer Game & Simulation Programming</p>
             </div>
-        </div>
-    </div>
+          </section>
+    </main>
+
+    <main>
+        <section id="prosody">
+            <h2>Prosody</h2>
+            <p>Prosody is a 4k VSRG developed by Cyphe Mercury. But what is a 4k VSRG?</p>
+            <p>A 4k VSRG (Vertical Scrolling Rhythm Game) is a type of rhythm game that is played on a keyboard with four arrow keys, arranged in a vertical line. The game consists of notes scrolling down the screen and the player must hit the corresponding arrow key when the note reaches the bottom of the screen in time with the music. </p>
+            <p>Prosody will feature a diverse library of music, ranging from popular songs to original compositions, created by and for the comunity. The game will include multiple difficulty levels for each song, allowing players of all skill levels to enjoy the game.</p>
+            <div class="prosody-images">
+              <img src="images/SCRNSHT3.png" alt="Prosody gameplay screenshot">
+              <img src="images/SCRNSHT4.png" alt="Prosody gameplay screenshot">
+              <img src="images/SCRNSHT5.png" alt="Prosody gameplay screenshot">
+              <img src="images/SCRNSHT6.png" alt="Prosody gameplay screenshot">
+            </div>
+            <div class="social-media">
+                <a href="http://cyphemercury.online/Aria-Engine-Prosody/"><img src="images/prosody.png" alt="Prosody icon"> Prosody</a>
+            </div>
+          </section>
+	</main>
+
+	<footer>
+		<p>&copy; 2023 Max Ellis</p>
+	</footer>
+
+    <script>
+        const prosodySection = document.querySelector("#prosody");
+        const prosodyImages = document.querySelectorAll("#prosody .prosody-images img");
+        const flwSection = document.querySelector("#flw");
+        const flwImages = document.querySelectorAll("#flw .flw-images img");
+
+        let prosodyImagesVisible = false;
+        let flwImagesVisible = false;
+
+        window.addEventListener("scroll", () => {
+        const prosodySectionTop = prosodySection.getBoundingClientRect().top;
+        const flwSectionTop = flwSection.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (prosodySectionTop < windowHeight * 0.75 && !prosodyImagesVisible) {
+            prosodyImages.forEach((image, index) => {
+            setTimeout(() => {
+                image.classList.add("show");
+            }, index * 300);
+            });
+            prosodyImagesVisible = true;
+        }
+        if (flwSectionTop < windowHeight * 0.75 && !flwImagesVisible) {
+            flwImages.forEach((image, index) => {
+            setTimeout(() => {
+                image.classList.add("show");
+            }, index * 300);
+            });
+            flwImagesVisible = true;
+        }
+        });
+    </script>
+
+    <script src="parallax.js"></script>
+    <script src="highlight.js"></script>
 </body>
-<script>
-    var Caller1 = document.getElementById("Callings");
-    var Caller2 = document.getElementById("Callings2");
-    var Caller3 = document.getElementById("Callings3");
-    Caller1.style.overflowY = "scroll";
-    Caller2.style.overflowY = "scroll";
-    Caller3.style.overflowY = "scroll";
-</script>
-<script src="index-Groups.js"></script>
-<script src="index-Updates-Web.js"></script>
-<script src="index-Updates-Game.js"></script>
-<script>
-    document
-        .getElementById("switcher1")
-        .addEventListener("mouseover", function(event) {
-                var switcher = document.getElementById("switcher1")
-
-                switcher.style.backgroundColor = "#707070";
-
-                document
-                    .getElementById("switcher1")
-                    .addEventListener("mouseout", function(event) {
-                            switcher.style.backgroundColor = "#909090";
-                        },
-                        false)
-            },
-            false)
-    document
-        .getElementById("switcher2")
-        .addEventListener("mouseover", function(event) {
-                var switcher = document.getElementById("switcher2")
-
-                switcher.style.backgroundColor = "#707070";
-
-                document
-                    .getElementById("switcher2")
-                    .addEventListener("mouseout", function(event) {
-                            switcher.style.backgroundColor = "#909090";
-                        },
-                        false)
-            },
-            false)
-    document
-        .getElementById("371")
-        .addEventListener("mouseover", function(event) {
-                var element = document.getElementById("371")
-
-                element.style.backgroundColor = "#707070";
-
-                document
-                    .getElementById("371")
-                    .addEventListener("mouseout", function(event) {
-                            element.style.backgroundColor = "#909090";
-                        },
-                        false)
-            },
-            false)
-</script>
-
 </html>
