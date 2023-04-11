@@ -59,7 +59,7 @@
         </section>
 
         <section id="achievements" class="achievements">
-            <h2>Achievements</h2>
+            <h2>Accomplishments</h2>
             <ul>
               <li>Competed in FBLA 2022-2023:</li>
               <ul>
@@ -151,21 +151,36 @@
         const flwSectionTop = flwSection.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
 
-        if (prosodySectionTop < windowHeight * 0.75 && !prosodyImagesVisible) {
+        if (prosodySectionTop < windowHeight * 0.8 && !prosodyImagesVisible) {
             prosodyImages.forEach((image, index) => {
             setTimeout(() => {
                 image.classList.add("show");
             }, index * 300);
             });
             prosodyImagesVisible = true;
+        } else {
+            prosodyImages.forEach((image, index) => {
+            setTimeout(() => {
+                image.classList.remove("show");
+            }, index * 300);
+            });
+            prosodyImagesVisible = false;
         }
-        if (flwSectionTop < windowHeight * 0.75 && !flwImagesVisible) {
+        
+        if (flwSectionTop < windowHeight * 0.8 && !flwImagesVisible) {
             flwImages.forEach((image, index) => {
             setTimeout(() => {
                 image.classList.add("show");
             }, index * 300);
             });
             flwImagesVisible = true;
+        } else {
+            flwImages.forEach((image, index) => {
+            setTimeout(() => {
+                image.classList.remove("show");
+            }, index * 300);
+            });
+            flwImagesVisible = false;
         }
         });
     </script>
