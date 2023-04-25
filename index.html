@@ -17,7 +17,7 @@
             </ul>
             <br>
             <ul>
-                <li><a href="#flw" onclick="scrollToSection('flw')">4-Letter Words</a></li>
+                <li><a href="#four-letter-words" onclick="scrollToSection('four-letter-words')">4-Letter Words</a></li>
                 <li><a href="#prosody" onclick="scrollToSection('prosody')">Prosody</a></li>
             </ul>
           </nav>
@@ -25,7 +25,7 @@
 
 	<main>
 		<section id="about-me">
-            <h2>About Me</h2>
+            <h1>About Me</h1>
             <p>
                 My name is Max Ellis, but online I go by Cyphe Mercury, Schiytu37, and sometimes Crypto-Path. I am a rhythm game addict who enjoys coding and developing new ideas.
             </p>
@@ -59,7 +59,7 @@
         </section>
 
         <section id="achievements" class="achievements">
-            <h2>Accomplishments</h2>
+            <h1>Accomplishments</h1>
             <ul>
               <li>Competed in FBLA 2022-2023:</li>
               <ul>
@@ -75,22 +75,22 @@
           </section>
 
 		<section id="my-sites" class="social-media">
-			<h2>My Sites</h2>
-			<h3>Social</h3>
+			<h1>My Sites</h1>
+			<h2>Social</h2>
 			<ul>
 				<li><a href="https://twitter.com/crypto_path"><img src="images/twitter.png" alt="Twitter icon"> Twitter</a></li>
 				<li><a href="https://discord.gg/ajWJNUHFq7"><img src="images/discord.png" alt="Discord icon"> Discord</a></li>
 			</ul>
-            <h3>Development</h3>
+            <h2>Development</h2>
             <ul>
 				<li><a href="https://github.com/Crypto-Path"><img src="images/github.png" alt="Github icon"> Github</a></li>
 				<li><a href="https://schiytu37.itch.io/"><img src="images/itchio.png" alt="Itch icon"> Itch</a></li>
 			</ul>
-            <h3>Production</h3>
+            <h2>Production</h2>
             <ul>
 				<li><a href="https://soundcloud.com/makyuri"><img src="images/soundcloud.png" alt="Soundcloud icon"> Soundcloud</a></li>
 			</ul>
-            <h3>Other</h3>
+            <h2>Other</h2>
             <ul>
 				<li><a href="http://cyphemercury.online/"><img src="images/Slime-Grass.jpg" alt="Prosody icon"> My Site</a></li>
 				<li><a href="http://cyphemercury.online/Aria-Engine-Prosody/"><img src="images/prosody.png" alt="Prosody icon"> Prosody</a></li>
@@ -99,14 +99,14 @@
     </main>
 
     <main>
-        <section id="flw">
-            <h2>4-Letter Words</h2>
+        <section id="four-letter-words">
+            <h1>4-Letter Words</h1>
             <p>4-Letter Words is a word game developed by Cyphe Mercury.</p>
             <p>Originally a joke that so many bad words are 4 letter words, 4-Letter words strives to help peaople discover new four letter words. These four letter words make you looks smarter now that you don't have to use the bad words to get your point across.</p>
             <p>4-Letter Words features a local leaderboard, and fun gameplay. Inspiration was take from the Popcap game, "Book Worm"</p>
-            <div class="flw-images">
-              <img src="images/SCRNSHT1.png" alt="flw gameplay screenshot">
-              <img src="images/SCRNSHT2.png" alt="flw gameplay screenshot">
+            <div class="four-letter-words-images">
+              <img class="flwsc" src="images/SCRNSHT1.png" alt="four-letter-words gameplay screenshot">
+              <img class="flwsc" src="images/SCRNSHT2.png" alt="four-letter-words gameplay screenshot">
             </div>
             <div class="social-media">
             <a href="https://schiytu37.itch.io/4-letter-words"><img src="images/Slime-Grass.jpg" alt="4-Letter Words icon"> 4-Letter Words</a>
@@ -117,15 +117,15 @@
 
     <main>
         <section id="prosody">
-            <h2>Prosody</h2>
+            <h1>Prosody</h1>
             <p>Prosody is a 4k VSRG developed by Cyphe Mercury. But what is a 4k VSRG?</p>
             <p>A 4k VSRG (Vertical Scrolling Rhythm Game) is a type of rhythm game that is played on a keyboard with four arrow keys, arranged in a vertical line. The game consists of notes scrolling down the screen and the player must hit the corresponding arrow key when the note reaches the bottom of the screen in time with the music. </p>
             <p>Prosody will feature a diverse library of music, ranging from popular songs to original compositions, created by and for the comunity. The game will include multiple difficulty levels for each song, allowing players of all skill levels to enjoy the game.</p>
             <div class="prosody-images">
-              <img src="images/SCRNSHT3.png" alt="Prosody gameplay screenshot">
-              <img src="images/SCRNSHT4.png" alt="Prosody gameplay screenshot">
-              <img src="images/SCRNSHT5.png" alt="Prosody gameplay screenshot">
-              <img src="images/SCRNSHT6.png" alt="Prosody gameplay screenshot">
+              <img class="prossc" src="images/SCRNSHT3.png" alt="Prosody gameplay screenshot">
+              <img class="prossc" src="images/SCRNSHT4.png" alt="Prosody gameplay screenshot">
+              <img class="prossc" src="images/SCRNSHT5.png" alt="Prosody gameplay screenshot">
+              <img class="prossc" src="images/SCRNSHT6.png" alt="Prosody gameplay screenshot">
             </div>
             <div class="social-media">
                 <a href="http://cyphemercury.online/Aria-Engine-Prosody/"><img src="images/prosody.png" alt="Prosody icon"> Prosody</a>
@@ -139,26 +139,26 @@
 
     <script>
         const prosodySection = document.querySelector("#prosody");
-        const prosodyImages = document.querySelectorAll("#prosody .prosody-images img");
-        const flwSection = document.querySelector("#flw");
-        const flwImages = document.querySelectorAll("#flw .flw-images img");
+        const prosodyImages = document.querySelectorAll("#prosody .prosody-images .prossc");
+        const fourLetterWordsSection = document.querySelector("#four-letter-words");
+        const fourLetterWordsImages = document.querySelectorAll("#four-letter-words .four-letter-words-images .flwsc");
+        const lim = 500
 
         let prosodyImagesVisible = false;
-        let flwImagesVisible = false;
+        let fourLetterWordsImagesVisible = false;
 
         window.addEventListener("scroll", () => {
         const prosodySectionTop = prosodySection.getBoundingClientRect().top;
-        const flwSectionTop = flwSection.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
+        const fourLetterWordsSectionTop = fourLetterWordsSection.getBoundingClientRect().top;
 
-        if (prosodySectionTop < windowHeight * 0.8 && !prosodyImagesVisible) {
+        if (prosodySectionTop < lim && !prosodyImagesVisible) {
             prosodyImages.forEach((image, index) => {
             setTimeout(() => {
                 image.classList.add("show");
             }, index * 300);
             });
             prosodyImagesVisible = true;
-        } else {
+        } else if (prosodySectionTop >  2 * lim) {
             prosodyImages.forEach((image, index) => {
             setTimeout(() => {
                 image.classList.remove("show");
@@ -167,21 +167,22 @@
             prosodyImagesVisible = false;
         }
         
-        if (flwSectionTop < windowHeight * 0.8 && !flwImagesVisible) {
-            flwImages.forEach((image, index) => {
+        if (fourLetterWordsSectionTop < lim && !fourLetterWordsImagesVisible) {
+            fourLetterWordsImages.forEach((image, index) => {
             setTimeout(() => {
                 image.classList.add("show");
             }, index * 300);
             });
-            flwImagesVisible = true;
-        } else {
-            flwImages.forEach((image, index) => {
+            fourLetterWordsImagesVisible = true;
+        } else if (fourLetterWordsSectionTop > 2 * lim) {
+            fourLetterWordsImages.forEach((image, index) => {
             setTimeout(() => {
                 image.classList.remove("show");
             }, index * 300);
             });
-            flwImagesVisible = false;
+            fourLetterWordsImagesVisible = false;
         }
+
         });
     </script>
 

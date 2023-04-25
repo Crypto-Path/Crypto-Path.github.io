@@ -60,7 +60,7 @@ nav a:hover {
 }
 
 main {
-	max-width: 800px;
+	max-width: 66%;
 	margin: 0 auto;
 	padding: 2rem;
 	background-color: rgba(0, 0, 0, 0.5);
@@ -166,21 +166,21 @@ footer p {
     opacity: 0;
     transform: translateY(20%);
     transition: all 1s ease-in-out;
-    max-width: 360px;
+    max-width: 49%;
   }
   
   .prosody-images img.show {
     opacity: 1;
     transform: translateY(0%);
   }
-  .flw-images img {
+  .four-letter-words-images img {
     opacity: 0;
     transform: translateY(20%);
     transition: all 1s ease-in-out;
-    max-width: 360px;
+    max-width: 49%;
   }
   
-  .flw-images img.show {
+  .four-letter-words-images img.show {
     opacity: 1;
     transform: translateY(0%);
   }
