@@ -197,3 +197,9 @@ footer p {
     max-width: 90%;
     height: auto;
   }
+
+  .code {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 5px;
+  }
