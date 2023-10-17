@@ -1,125 +1,125 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-	background: url(images/background.png);
-	background-size: cover;
-	font-family: Arial, sans-serif;
-	color: #fff;
+    background: url(images/background.png);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #fff;
 }
 
 header {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 2rem;
-	background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 h1 {
-	font-size: 3rem;
-	text-align: center;
-	margin-bottom: 0.5rem;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
 }
 
 .subtitle {
-	font-size: 1.2rem;
-	text-align: center;
-	margin-bottom: 2rem;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 nav {
-	margin-top: 1rem;
+    margin-top: 1rem;
 }
 
 nav ul {
-	display: flex;
-	list-style: none;
+    display: flex;
+    list-style: none;
 }
 
 nav li:not(:last-child) {
-	margin-right: 1rem;
+    margin-right: 1rem;
 }
 
 nav a {
-	display: block;
-	padding: 0.5rem 1rem;
-	background-color: rgba(255, 255, 255, 0.8);
-	color: #000;
-	text-decoration: none;
-	border-radius: 0.5rem;
-	transition: background-color 0.2s ease-in-out;
+    display: block;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease-in-out;
 }
 
 nav a:hover {
-	background-color: #000;
-	color: #fff;
+    background-color: #000;
+    color: #fff;
 }
 
 main {
-	max-width: 66%;
-	margin: 0 auto;
-	padding: 2rem;
-	background-color: rgba(0, 0, 0, 0.5);
-	margin-top: 2rem;
+    max-width: 66%;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 2rem;
     border-radius: 5px;
 }
 
 .about h2,
 .social-media h2 {
-	margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .about p {
-	line-height: 1.5;
-	margin-bottom: 2rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
 }
 
 .social-media ul {
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
 }
 
 .social-media li:not(:last-child) {
-	margin-right: 1rem;
-	margin-bottom: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 
 .social-media a {
-	display: flex;
-	align-items: center;
-	background-color: rgba(255, 255, 255, 0.8);
-	color: #000;
-	padding: 0.5rem 1rem;
-	border-radius: 0.5rem;
-	text-decoration: none;
-	transition: background-color 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .social-media img {
-	width: 1.5rem;
-	height: 1.5rem;
-	margin-right: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
 }
 
 .social-media a:hover {
-	background-color: #000;
-	color: #fff;
+    background-color: #000;
+    color: #fff;
 }
 
 footer {
-	background-color: rgba(0, 0, 0, 0.8);
-	padding: 1rem;
-	text-align: center;
-	margin-top: 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
 }
 
 footer p {
-	font-size: 0.8rem;
+    font-size: 0.8rem;
 }
 
 .background {
@@ -128,78 +128,96 @@ footer p {
     background-size: 120%;
     background-attachment: fixed;
 }
+
 .about-images {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 50px;
-  }
-  
-  .placeholder-image {
+}
+
+.placeholder-image {
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-  
-  .placeholder-image:hover {
+}
+
+.placeholder-image:hover {
     transform: scale(1.1);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
-  }
-  section:not(:last-child) {
+}
+
+section:not(:last-child) {
     margin-bottom: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid #ddd;
-  }   
-  
-  section.highlight {
+}
+
+section.highlight {
     background-color: rgba(255, 255, 255, 0.3);
     transition: background-color 1s ease-out;
-  }
-  
-  section.highlight.active {
+}
+
+section.highlight.active {
     background-color: rgba(255, 255, 255, 0);
-  }
-  .prosody-images img {
+}
+
+.prosody-images img {
     opacity: 0;
     transform: translateY(20%);
     transition: all 1s ease-in-out;
     max-width: 49%;
-  }
-  
-  .prosody-images img.show {
+}
+
+.prosody-images img.show {
     opacity: 1;
     transform: translateY(0%);
-  }
-  .four-letter-words-images img {
+}
+
+.four-letter-words-images img {
     opacity: 0;
     transform: translateY(20%);
     transition: all 1s ease-in-out;
     max-width: 49%;
-  }
-  
-  .four-letter-words-images img.show {
+}
+
+.four-letter-words-images img.show {
     opacity: 1;
     transform: translateY(0%);
-  }
-  #show_image_popup{
-    position: absolute; /*  so that not take place   */
+}
+
+#show_image_popup {
+    position: absolute;
+    /*  so that not take place   */
     top: 50%;
     left: 50%;
-    z-index: 1000; /*  adobe all elements   */
-    transform: translate(-50%, -50%); /*  make center   */
-  
-    display: none; /*  to hide first time   */
-  }
-  #show_image_popup img{
+    z-index: 1000;
+    /*  adobe all elements   */
+    transform: translate(-50%, -50%);
+    /*  make center   */
+    display: none;
+    /*  to hide first time   */
+}
+
+#show_image_popup img {
     max-width: 90%;
     height: auto;
-  }
+}
 
-  .code {
+.code {
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     padding: 5px;
-  }
+}
+
+body.background {
+    background-repeat: no-repeat;
+    background-size: 150%;
+}
+
+body {
+    background: #000;
+}
