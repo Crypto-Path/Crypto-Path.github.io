@@ -8,6 +8,21 @@
     <url>
         <loc>https://cyphemercury.online/Aria-Engine-Prosody/index.html</loc>
         <changefreq>daily</changefreq>
-        <priority>1.0</priority>
+        <priority>2.0</priority>
+    </url>
+    <url>
+        <loc>https://cyphemercury.online/Morania-Idle--Rewrite/index.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>3.0</priority>
+    </url>
+    <url>
+        <loc>https://cyphemercury.online/Grinding-to-rule-the-world/index.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>4.0</priority>
+    </url>
+    <url>
+        <loc>https://cyphemercury.online/Crafting-Game/index.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>5.0</priority>
     </url>
 </urlset>

@@ -1,204 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Max Ellis - Cyphe Mercury</title>
-    <meta http-equiv="content-language" content="en">
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Rhythm Game, Game, Rhythm, Prosody, 4k, 4, keys, vsrg, VSRG, osu!, mania, quaver, etterna, step-mania, step, mania, sound, voltex, sdvx, music, community, charts, maps, levels, creative, open source, free, unblocked, school, chromebook friendly, Cyphe, Mercury, Cyphe Mercury, Max, Ellis, Schiytu, Schiytu37, Anachronicdelusions, Crypto_Path, Crypto-Path, shito, Shitwo">
-    <meta name="description" content="Basic information about Cyphe Mercury">
+    <title>Cyphe Mercury</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
 
-    <meta content="Cyphe Mercury" property="og:title">
-    <meta content="Basic information about Cyphe Mercury" property="og:description">
-    <meta content="Cyphe Mercury" property="og:site_name">
-    <meta content='https://cyphemercury.online/prosody.png' property='og:image'>
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
 
-    <meta property="twitter:card" content="Cyphe Mercury">
-    <meta property="twitter:url" content="https://cyphemercury.online/background.png">
-    <meta property="twitter:title" content="Cyphe Mercury">
-    <meta property="twitter:description" content="Basic information about Cyphe Mercury">
-    <meta property="twitter:image" content="https://cyphemercury.online/prosody.png">
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
 
-    <link rel="shortcut icon" type="image/png" href="Sprites/Icon.png" />
-    <link rel="stylesheet" href="CSS/UI.css">
-    <link rel="stylesheet" href="CSS/BG.css">
-    <link rel="stylesheet" href="CSS/NoSelect.css">
-    <link rel="stylesheet" href="style.css">
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .container-links {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #222;
+        }
+        
+
+        .banner {
+            width: 100%;
+            max-width: 100%;
+            display: block;
+        }
+
+        .banner-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .profile-section {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 20px; /* Adjust as needed */
+            box-sizing: border-box;
+            padding: 12px;
+        }
+
+        .profile-picture {
+            width: 80px; /* Adjust size as needed */
+            height: 80px; /* Adjust size as needed */
+            border-radius: 50%;
+            border: 3px solid #fff;
+            margin-right: 20px;
+        }
+
+        .profile-info {
+            color: #fff;
+        }        
+
+        .about-section {
+            margin-top: 20px;
+            padding: 12px;
+        }
+
+        .games-section h2 {
+            padding: 12px;
+        }
+
+        #cardContainer {
+            display: flex;
+            padding: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: #111;
+        }
+
+        .card {
+            width: 130px;
+            height: 200px;
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 200ms, box-shadow 200ms;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .card:hover {
+            transform: scale(1.15);
+            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .card:active {
+            transform: scale(1.075);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(1px);
+            transition: transform 200ms;
+        }
+
+        .card:hover .card-image {
+            filter: blur(0px);
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            box-sizing: border-box;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            transition: opacity 200ms;
+        }
+
+        .card:hover .card-content {
+            opacity: 0;
+        }
+
+        /* Modal Styles */
+        .modal-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-background.active {
+            display: flex;
+        }
+
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1001;
+            display: none;
+
+            
+            background-color: rgba(0, 0, 0, 0.8);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-blend-mode: multiply;
+        }
+
+        .modal.active {
+            display: block;
+        }
+
+        .modal-content {
+            margin-bottom: 20px;
+        }
+
+        #close-modal {
+            cursor: pointer;
+            background-color: #555;
+            border: none;
+            padding: 10px 20px;
+            color: #fff;
+            border-radius: 5px;
+        }
+    </style>
 </head>
-
-<body class="background">
-    <header>
-        <h1>Max Ellis</h1>
-        <p class="subtitle code">AKA Cyphe Mercury, Schiytu37, and Crypto-Path</p>
-        <nav>
-            <ul>
-                <li><a href="#about-me" onclick="scrollToSection('about-me')">About Me</a></li>
-                <li><a href="#achievements" onclick="scrollToSection('achievements')">Achievements</a></li>
-                <li><a href="#my-sites" onclick="scrollToSection('my-sites')">My Sites</a></li>
-            </ul>
-            <br>
-            <ul>
-                <li><a href="#four-letter-words" onclick="scrollToSection('four-letter-words')">4-Letter Words</a></li>
-                <li><a href="#prosody" onclick="scrollToSection('prosody')">Prosody</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="about-me">
-            <h1>About Me</h1>
-            <p>
-                My name is Max Ellis, but online I go by Cyphe Mercury, Schiytu37, and sometimes Crypto-Path. I am a rhythm game addict who enjoys coding and developing new ideas.
-            </p>
-            <br>
-            <p>
-                Some of my interests and skills include:
-            </p>
-            <ul>
-                <li>Programming in C#, HTML/JS/CSS</li>
-                <li>Creating music in FL Studio</li>
-                <li>3D modeling in Blender</li>
-                <li>Writing and creating stories</li>
-                <li>Playing rhythm games</li>
-            </ul>
-            <br>
-            <p>
-                My ultimate goal is to learn all the necessary skills needed to make games so that I can fill any role needed to help or make my own games and do it well.
-            </p>
-            <br>
-            <p>
-                In my free time, I also develop Prosody, a 4K VSRG, and manage its related Discord server.
-            </p>
-            <br>
-            <p>
-                If you want to connect with me or see some of my work, check out my GitHub page.
-            </p>
-            <br>
-            <a href="https://github.com/Crypto-Path" target="_blank">
-                <img class="placeholder-image" src="images/github.png" alt="Placeholder image">
-            </a>
-            <br>
-        </section>
-
-        <section id="achievements" class="achievements">
-            <h1>Accomplishments</h1>
-            <ul>
-                <li>Competed in FBLA 2022-2023:</li>
-                <ul>
-                    <li>In state got first place in Computer Game & Program Simulation</li>
-                    <li>Also competed in Computer problem solving and placed within the top 10</li>
-                </ul>
-                <li>Participated in the arcade themed math competition at COCC 2023</li>
-                <ul>
-                    <li>Parcipated in the Advanced Math catagory (College Algebra/Trigonometry)</li>
-                </ul>
-            </ul>
-        </section>
-
-        <section id="my-sites" class="social-media">
-            <h1>My Sites</h1>
-            <h2>My sites</h2>
-            <ul>
-                <li>
-                    <a href="http://cyphemercury.online/"><img src="images/home.png" alt="Prosody icon"> My Site</a>
-                </li>
-                <li>
-                    <a href="http://cyphemercury.online/Aria-Engine-Prosody/"><img src="images/prosody.png" alt="Prosody icon"> Prosody</a>
-                </li>
-            </ul>
-            <h2>Social</h2>
-            <ul>
-                <li>
-                    <a href="https://twitter.com/crypto_path"><img src="images/twitter.png" alt="Twitter icon"> Twitter</a>
-                </li>
-            </ul>
-            <h2>Development</h2>
-            <ul>
-                <li>
-                    <a href="https://github.com/Crypto-Path"><img src="images/github.png" alt="Github icon"> Github</a>
-                </li>
-                <li>
-                    <a href="https://schiytu37.itch.io/"><img src="images/itchio.png" alt="Itch icon"> Itch</a>
-                </li>
-            </ul>
-            <h2>Production</h2>
-            <ul>
-                <li>
-                    <a href="https://soundcloud.com/makyuri"><img src="images/soundcloud.png" alt="Soundcloud icon"> Soundcloud</a>
-                </li>
-            </ul>
-            <h2>Other</h2>
-            <ul>
-                <li>
-                    <a href="https://quavergame.com/user/66471"><img src="images/quaver.png" alt="Quaver icon"> Quaver</a>
-                </li>
-                <li>
-                    <a href="https://etternaonline.com/user/cyphe"><img src="images/etterna.png" alt="Etterna icon"> Etterna</a>
-                </li>
-                <li>
-                    <a href="https://osu.ppy.sh/users/16004107"><img src="images/osu.png" alt="Osu icon"> osu!</a>
-                </li>
-                <li>
-                    <a href="https://prosody-server.schiytu37.repl.co/profiles/user.html?user=Cyphe_Mercury"><img src="images/prosody.png" alt="Prosody icon"> prosody</a>
-                </li>
-                <li>
-                    <a href="https://steamcommunity.com/profiles/76561198849099012/"><img src="images/steam.png" alt="Steam icon"> Steam</a>
-                </li>
-            </ul>
-        </section>
-    </main>
-
-    <main>
-        <section id="four-letter-words">
-            <h1>4-Letter Words</h1>
-            <p>4-Letter Words is a word game developed by Cyphe Mercury.</p>
-            <p>Originally a joke that so many bad words are 4 letter words, 4-Letter words strives to help peaople discover new four letter words. These four letter words make you looks smarter now that you don't have to use the bad words to get your point
-                across.
-            </p>
-            <p>4-Letter Words features a local leaderboard, and fun gameplay. Inspiration was take from the Popcap game, "Book Worm"</p>
-            <div class="four-letter-words-images">
-                <img class="flwsc" src="images/SCRNSHT1.png" alt="four-letter-words gameplay screenshot">
-                <img class="flwsc" src="images/SCRNSHT2.png" alt="four-letter-words gameplay screenshot">
+<body>
+    <div class="container">
+        <div class="banner-container">
+            <img class="banner" src="images/cyphesBanner.png" alt="Banner">
+            <div class="profile-section">
+                <img class="profile-picture" src="images/cyphesCover.png" alt="Profile Picture">
+                <div class="profile-info">
+                    <div class="profile-name">Cyphe Mercury</div>
+                    <div class="profile-title">Game Developer</div>
+                </div>
             </div>
-            <div class="social-media">
-                <a href="https://schiytu37.itch.io/4-letter-words"><img src="images/Slime-Grass.jpg" alt="4-Letter Words icon"> 4-Letter Words</a>
-                <p>Made for 2023 FBLA Computer Game & Simulation Programming</p>
-            </div>
-        </section>
-    </main>
-
-    <main>
-        <section id="prosody">
-            <h1>Prosody</h1>
-            <p>Prosody is a 4k VSRG developed by Cyphe Mercury. But what is a 4k VSRG?</p>
-            <p>A 4k VSRG (Vertical Scrolling Rhythm Game) is a type of rhythm game that is played on a keyboard with four arrow keys, arranged in a vertical line. The game consists of notes scrolling down the screen and the player must hit the corresponding
-                arrow key when the note reaches the bottom of the screen in time with the music. </p>
-            <p>Prosody will feature a diverse library of music, ranging from popular songs to original compositions, created by and for the comunity. The game will include multiple difficulty levels for each song, allowing players of all skill levels to
-                enjoy the game.</p>
-            <div class="prosody-images">
-                <img class="prossc" src="images/SCRNSHT3.png" alt="Prosody gameplay screenshot">
-                <img class="prossc" src="images/SCRNSHT4.png" alt="Prosody gameplay screenshot">
-                <img class="prossc" src="images/SCRNSHT5.png" alt="Prosody gameplay screenshot">
-                <img class="prossc" src="images/SCRNSHT6.png" alt="Prosody gameplay screenshot">
-            </div>
-            <div class="social-media">
-                <a href="http://cyphemercury.online/Aria-Engine-Prosody/"><img src="images/prosody.png" alt="Prosody icon"> Prosody</a>
-                <a href="https://discord.gg/ajWJNUHFq7"><img src="images/discord.png" alt="Discord icon"> Discord</a>
-            </div>
-
-        </section>
-    </main>
-
+        </div>
+        
+        <div class="about-section">
+            <h2>About Me</h2>
+            <p>
+                I'm Max Ellis, also known as Cyphe Mercury online. Passionate about rhythm games and coding, I'm constantly exploring new ideas.
+            </p>
+        
+            <h3>What I do:</h3>
+            <ul>
+                <li><strong>Youtube:</strong> New video every saturday a 1pm pacific time (GMT-8)</li>
+                <li><strong>Programming:</strong> Proficient in C#, Java, HTML/JS/CSS.</li>
+                <li><strong>School:</strong> Senior in high school</li>
+                <li><strong>Rhythm Games:</strong> Only games I enjoy</li>
+            </ul>
+        
+            <p>
+                My main goal is to become a versatile game developer, equipped to contribute effectively to projects or create my own.
+            </p>
+        
+            <p>
+                In my free time, I develop projects, make devlogs for them, and manage its community (Not much to manage tbh).
+            </p>
+        
+            <h3>Accomplishments</h3>
+            <ul>
+                <li>
+                    FBLA 2022-2023:
+                    <ul>
+                        <li>State-level first place in Computer Game & Program Simulation.</li>
+                        <li>Top 10 placement in Computer Problem Solving.</li>
+                    </ul>
+                </li>
+                <li>Participated in the arcade-themed math competition at COCC 2023, Advanced Math category.</li>
+            </ul>
+        </div>
+        
+        <div class="games-section">
+            <h2>My Games</h2>
+            <div class="container" id="cardContainer"></div>
+        </div>
+        
     <footer>
-        <p>&copy; 2023 Max Ellis</p>
+        <p>© 2023 Max Ellis</p>
+        <div class="container-links">
+            <ul>
+                <h3>Contact</h3>
+                <li>
+                    <li><a>cyphe371@gmail.com</a></li>
+                    <li><a>Discord: cyphemercury</a></li>
+                </li>
+            </ul>
+            <ul>
+                <h3>Socials</h3>
+                <li>
+                    <li><a href="https://www.youtube.com/channel/UCk6xe3wkGo47rbEZTt8nx2w">Youtube</a></li>
+                    <li><a href="https://twitter.com/crypto_path">Twitter</a></li>
+                </li>
+            </ul>
+            <ul>
+                <h3>Dev</h3>
+                <li><a href="https://github.com/Crypto-Path">GitHub</a></li>
+                <li><a href="https://stackoverflow.com/users/15764198/schiytu37">Stack Overflow</a></li>
+                <li><a href="https://codepen.io/Crypto-Path">CodePen</a></li>
+            </ul>
+            <ul>
+                <h3>Production</h3>
+                <li>
+                    <li><a>Portfolio</a></li>
+                    <li><a href="https://schiytu37.itch.io/">Itch.io</a></li>
+                    <li><a href="https://soundcloud.com/makyuri">Sound Cloud</a></li>
+                </li>
+            </ul>
+            <ul>
+                <h3>Other</h3>
+                <li>
+                    <li><a href="https://quavergame.com/user/66471">Quaver</a></li>
+                    <li><a href="https://etternaonline.com/user/cyphe">Etterna</a></li>
+                    <li><a href="https://osu.ppy.sh/users/16004107">osu!</a></li>
+                    <li><a href="https://replit.com/@Schiytu37/Prosody-Server">Prosody</a></li>
+                    <li><a href="https://steamcommunity.com/profiles/76561198849099012/">Steam</a></li>
+                </li>
+            </ul>
+        </div>
     </footer>
+    </div>
 
-    <script src="script.js">
+    <!-- Modal -->
+    <div class="modal-background" id="modal-background"></div>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <a href="#" id="modal-link">Check it out!</a>
+        </div>
+        <button id="close-modal">Close</button>
+    </div>
+
+    <script>
+        class Card {
+            constructor(imageSrc, title, description, link) {
+                this.imageSrc = imageSrc;
+                this.title = title;
+                this.description = description;
+                this.link = link;
+            }
+        }
+
+        const cards = [
+            { imageSrc: "images/prosodyBanner.png", title: "Prosody", description: "Prosody is a 4-key Vertical Scrolling Rhythm Game (VSRG) developed by Cyphe Mercury. In Prosody, players synchronize their actions with scrolling notes to the beat of the music. The game offers an intuitive gameplay experience with a dynamic soundtrack.<br><br>Players can compete for top rankings and claim their spot on the leaderboards. Prosody welcomes players of all skill levels, providing an inclusive space to test reflexes and enjoy the rhythm.<br><br>(Server currently down - Status : unplayable)", link: "https://cyphemercury.online/Aria-Engine-Prosody/" },
+            { imageSrc: "images/4wlBanner.png", title: "4-Letter Words", description: "4-Letter Words is a word game developed by Cyphe Mercury for the 2023 FBLA Computer Game & Program Simulation competition, drawing inspiration from Wordle. Players aim to decipher hidden words within a 10-minute timeframe, competing on a local leaderboard.<br><br>Challenge your vocabulary skills and enjoy the competitive gameplay offered by 4-Letter Words.", link: "https://schiytu37.itch.io/4-letter-words" },
+            { imageSrc: "images/moraniaIdleBanner.png", title: "Morania Idle", description: "Morania Idle is an incremental idle game set in the fictional world of Morania. Players progress through the game by completing quests, defeating monsters, and crafting items. The game features various mechanics such as leveling up, upgrading equipment, and unlocking new abilities. Players can gather resources, explore different regions, and engage in battles to advance. The game employs a simple interface and relies heavily on incremental progress, encouraging players to strategize and optimize their gameplay to achieve higher levels and unlock new content.", link: "https://cyphemercury.online/Morania-Idle--Rewrite/" },
+            { imageSrc: "images/agiBanner.png", title: "Adventurer's Guild Incremental", description: "Adventurer's Guild Incremental offers players the opportunity to construct and develop their very own guild, where adventurers can be enlisted to embark on quests, gather valuable materials, and engage in combat to secure riches. Witness the growth of your guild members as they evolve, equipping themselves with gear obtained from shops or acquired through monster drops. With an emphasis on enjoyment and exploration, embark on a journey of discovery within the game's open world.", link: "https://schiytu37.itch.io/adventurers-guild-incremental" },
+            { imageSrc: "images/gtrawBanner.png", title: "Grinding to Rule Another World", description: "An 'Idling to rule the gods' Like game, with a more rpg like twist to it.", link: "https://cyphemercury.online/Grinding-to-rule-the-world/" },
+            { imageSrc: "images/craftingOdysseyBanner.png", title: "Crafting Game", description: "In Crafting Odyssey, players are presented with a 5x5 crafting grid and tasked with deciphering complex crafting recipes. The game features a community-driven approach to discovery, where players collaborate to uncover hidden recipes through experimentation. With an emphasis on intricate crafting mechanics, Crafting Odyssey offers an extremely challenging experience for players seeking to torture themselves.", link: "https://cyphemercury.online/Crafting-Game/" },
+            
+        ];
+
+        const cardContainer = document.getElementById("cardContainer");
+
+        cards.forEach((card, index) => {
+            const newCard = document.createElement("div");
+            newCard.classList.add("card");
+            newCard.innerHTML = `
+                <img class="card-image" src="${card.imageSrc}" alt="${card.title}">
+                <div class="card-content">${card.title}</div>
+            `;
+            newCard.addEventListener("click", () => openModal(index));
+            cardContainer.appendChild(newCard);
+        });
+
+        function openModal(index) {
+            const modalTitle = document.getElementById("modal-title");
+            const modalDescription = document.getElementById("modal-description");
+            const modalLink = document.getElementById("modal-link");
+            const modalBackground = document.getElementById("modal-background");
+            const modal = document.getElementById("modal");
+            modal.style.backgroundImage = "url('" + cards[index].imageSrc + "')";
+
+            modalTitle.textContent = cards[index].title;
+            modalDescription.innerHTML = cards[index].description;
+            modalLink.href = cards[index].link;
+
+            modalBackground.classList.add("active");
+            modal.classList.add("active");
+
+            modalBackground.addEventListener("click", closeModalOutside);
+        }
+
+        function closeModal() {
+            const modalBackground = document.getElementById("modal-background");
+            const modal = document.getElementById("modal");
+
+            modalBackground.classList.remove("active");
+            modal.classList.remove("active");
+
+            modalBackground.removeEventListener("click", closeModalOutside);
+        }
+
+        function closeModalOutside(e) {
+            if (e.target === modalBackground) {
+                closeModal();
+            }
+        }
+
+        const closeButton = document.getElementById("close-modal");
+        if (closeButton) {
+            closeButton.addEventListener("click", closeModal);
+        }
     </script>
-    <script src="parallax.js"></script>
-    <script src="highlight.js"></script>
+    
 </body>
-
 </html>
