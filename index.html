@@ -1,213 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyphe Mercury</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            flex-direction: column;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .container-links {
-            display: flex;
-            justify-content: space-around;
-            flex-direction: row;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #222;
-        }
-        
-
-        .banner {
-            width: 100%;
-            max-width: 100%;
-            display: block;
-        }
-
-        .banner-container {
-            position: relative;
-            width: 100%;
-        }
-
-        .profile-section {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            padding: 20px; /* Adjust as needed */
-            box-sizing: border-box;
-            padding: 12px;
-        }
-
-        .profile-picture {
-            width: 80px; /* Adjust size as needed */
-            height: 80px; /* Adjust size as needed */
-            border-radius: 50%;
-            border: 3px solid #fff;
-            margin-right: 20px;
-        }
-
-        .profile-info {
-            color: #fff;
-        }        
-
-        .about-section {
-            margin-top: 20px;
-            padding: 12px;
-        }
-
-        .games-section h2 {
-            padding: 12px;
-        }
-
-        #cardContainer {
-            display: flex;
-            padding: 2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            background-color: #111;
-        }
-
-        .card {
-            width: 130px;
-            height: 200px;
-            margin: 10px;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            border-radius: 10px;
-            transition: transform 200ms, box-shadow 200ms;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .card:hover {
-            transform: scale(1.15);
-            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
-        }
-
-        .card:active {
-            transform: scale(1.075);
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        .card-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: blur(1px);
-            transition: transform 200ms;
-        }
-
-        .card:hover .card-image {
-            filter: blur(0px);
-            transform: scale(1.1);
-        }
-
-        .card-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 10px;
-            box-sizing: border-box;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            transition: opacity 200ms;
-        }
-
-        .card:hover .card-content {
-            opacity: 0;
-        }
-
-        /* Modal Styles */
-        .modal-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            display: none;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-background.active {
-            display: flex;
-        }
-
-        .modal {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            z-index: 1001;
-            display: none;
-
-            
-            background-color: rgba(0, 0, 0, 0.8);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-blend-mode: multiply;
-        }
-
-        .modal.active {
-            display: block;
-        }
-
-        .modal-content {
-            margin-bottom: 20px;
-        }
-
-        #close-modal {
-            cursor: pointer;
-            background-color: #555;
-            border: none;
-            padding: 10px 20px;
-            color: #fff;
-            border-radius: 5px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
     <div class="container">
         <div class="banner-container">
@@ -220,13 +20,13 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="about-section">
             <h2>About Me</h2>
             <p>
                 I'm Max Ellis, also known as Cyphe Mercury online. Passionate about rhythm games and coding, I'm constantly exploring new ideas.
             </p>
-        
+
             <h3>What I do:</h3>
             <ul>
                 <li><strong>Youtube:</strong> New video every saturday a 1pm pacific time (GMT-8)</li>
@@ -234,15 +34,15 @@
                 <li><strong>School:</strong> Senior in high school</li>
                 <li><strong>Rhythm Games:</strong> Basically only games I play</li>
             </ul>
-        
+
             <p>
                 My main goal is to become a versatile game developer, equipped to contribute effectively to projects or create my own.
             </p>
-        
+
             <p>
                 In my free time, I develop projects, make devlogs for them, and manage its community (Not much to manage tbh).
             </p>
-        
+
             <h3>Accomplishments</h3>
             <ul>
                 <li>
@@ -255,55 +55,55 @@
                 <li>Participated in the arcade-themed math competition at COCC 2023, Advanced Math category.</li>
             </ul>
         </div>
-        
+
         <div class="games-section">
             <h2>My Games</h2>
             <div class="container" id="cardContainer"></div>
         </div>
-        
-    <footer>
-        <p>© 2023 Max Ellis</p>
-        <div class="container-links">
-            <ul>
-                <h3>Contact</h3>
-                <li>
-                    <li><a>cyphe371@gmail.com</a></li>
-                    <li><a>Discord: cyphemercury</a></li>
-                </li>
-            </ul>
-            <ul>
-                <h3>Socials</h3>
-                <li>
-                    <li><a href="https://www.youtube.com/channel/UCk6xe3wkGo47rbEZTt8nx2w">Youtube</a></li>
-                    <li><a href="https://twitter.com/crypto_path">Twitter</a></li>
-                </li>
-            </ul>
-            <ul>
-                <h3>Dev</h3>
-                <li><a href="https://github.com/Crypto-Path">GitHub</a></li>
-                <li><a href="https://stackoverflow.com/users/15764198/schiytu37">Stack Overflow</a></li>
-                <li><a href="https://codepen.io/Crypto-Path">CodePen</a></li>
-            </ul>
-            <ul>
-                <h3>Production</h3>
-                <li>
-                    <li><a>Portfolio</a></li>
-                    <li><a href="https://schiytu37.itch.io/">Itch.io</a></li>
-                    <li><a href="https://soundcloud.com/makyuri">Sound Cloud</a></li>
-                </li>
-            </ul>
-            <ul>
-                <h3>Other</h3>
-                <li>
-                    <li><a href="https://quavergame.com/user/66471">Quaver</a></li>
-                    <li><a href="https://etternaonline.com/user/cyphe">Etterna</a></li>
-                    <li><a href="https://osu.ppy.sh/users/16004107">osu!</a></li>
-                    <li><a href="https://replit.com/@Schiytu37/Prosody-Server">Prosody</a></li>
-                    <li><a href="https://steamcommunity.com/profiles/76561198849099012/">Steam</a></li>
-                </li>
-            </ul>
-        </div>
-    </footer>
+
+        <footer>
+            <p>© 2023 Max Ellis</p>
+            <div class="container-links">
+                <ul>
+                    <h3>Contact</h3>
+                    <li>
+                        <li><a>cyphe371@gmail.com</a></li>
+                        <li><a>Discord: cyphemercury</a></li>
+                    </li>
+                </ul>
+                <ul>
+                    <h3>Socials</h3>
+                    <li>
+                        <li><a href="https://www.youtube.com/channel/UCk6xe3wkGo47rbEZTt8nx2w">Youtube</a></li>
+                        <li><a href="https://twitter.com/crypto_path">Twitter</a></li>
+                    </li>
+                </ul>
+                <ul>
+                    <h3>Dev</h3>
+                    <li><a href="https://github.com/Crypto-Path">GitHub</a></li>
+                    <li><a href="https://stackoverflow.com/users/15764198/schiytu37">Stack Overflow</a></li>
+                    <li><a href="https://codepen.io/Crypto-Path">CodePen</a></li>
+                </ul>
+                <ul>
+                    <h3>Production</h3>
+                    <li>
+                        <li><a>Portfolio</a></li>
+                        <li><a href="https://schiytu37.itch.io/">Itch.io</a></li>
+                        <li><a href="https://soundcloud.com/makyuri">Sound Cloud</a></li>
+                    </li>
+                </ul>
+                <ul>
+                    <h3>Other</h3>
+                    <li>
+                        <li><a href="https://quavergame.com/user/66471">Quaver</a></li>
+                        <li><a href="https://etternaonline.com/user/cyphe">Etterna</a></li>
+                        <li><a href="https://osu.ppy.sh/users/16004107">osu!</a></li>
+                        <li><a href="https://replit.com/@Schiytu37/Prosody-Server">Prosody</a></li>
+                        <li><a href="https://steamcommunity.com/profiles/76561198849099012/">Steam</a></li>
+                    </li>
+                </ul>
+            </div>
+        </footer>
     </div>
 
     <!-- Modal -->
@@ -327,14 +127,38 @@
             }
         }
 
-        const cards = [
-            { imageSrc: "images/prosodyBanner.png", title: "Prosody", description: "Prosody is a 4-key Vertical Scrolling Rhythm Game (VSRG) developed by Cyphe Mercury. In Prosody, players synchronize their actions with scrolling notes to the beat of the music. The game offers an intuitive gameplay experience with a dynamic soundtrack.<br><br>Players can compete for top rankings and claim their spot on the leaderboards. Prosody welcomes players of all skill levels, providing an inclusive space to test reflexes and enjoy the rhythm.<br><br>(Server currently down - Status : unplayable)", link: "https://cyphemercury.online/Aria-Engine-Prosody/" },
-            { imageSrc: "images/4wlBanner.png", title: "4-Letter Words", description: "4-Letter Words is a word game developed by Cyphe Mercury for the 2023 FBLA Computer Game & Program Simulation competition, drawing inspiration from Wordle. Players aim to decipher hidden words within a 10-minute timeframe, competing on a local leaderboard.<br><br>Challenge your vocabulary skills and enjoy the competitive gameplay offered by 4-Letter Words.", link: "https://schiytu37.itch.io/4-letter-words" },
-            { imageSrc: "images/moraniaIdleBanner.png", title: "Morania Idle", description: "Morania Idle is an incremental idle game set in the fictional world of Morania. Players progress through the game by completing quests, defeating monsters, and crafting items. The game features various mechanics such as leveling up, upgrading equipment, and unlocking new abilities. Players can gather resources, explore different regions, and engage in battles to advance. The game employs a simple interface and relies heavily on incremental progress, encouraging players to strategize and optimize their gameplay to achieve higher levels and unlock new content.", link: "https://cyphemercury.online/Morania-Idle--Rewrite/" },
-            { imageSrc: "images/agiBanner.png", title: "Adventurer's Guild Incremental", description: "Adventurer's Guild Incremental offers players the opportunity to construct and develop their very own guild, where adventurers can be enlisted to embark on quests, gather valuable materials, and engage in combat to secure riches. Witness the growth of your guild members as they evolve, equipping themselves with gear obtained from shops or acquired through monster drops. With an emphasis on enjoyment and exploration, embark on a journey of discovery within the game's open world.", link: "https://schiytu37.itch.io/adventurers-guild-incremental" },
-            { imageSrc: "images/gtrawBanner.png", title: "Grinding to Rule Another World", description: "An 'Idling to rule the gods' Like game, with a more rpg like twist to it.", link: "https://cyphemercury.online/Grinding-to-rule-the-world/" },
-            { imageSrc: "images/craftingOdysseyBanner.png", title: "Crafting Game", description: "In Crafting Odyssey, players are presented with a 5x5 crafting grid and tasked with deciphering complex crafting recipes. The game features a community-driven approach to discovery, where players collaborate to uncover hidden recipes through experimentation. With an emphasis on intricate crafting mechanics, Crafting Odyssey offers an extremely challenging experience for players seeking to torture themselves.", link: "https://cyphemercury.online/Crafting-Game/" },
-            
+        const cards = [{
+                imageSrc: "images/prosodyBanner.png",
+                title: "Prosody",
+                description: "Prosody is a 4-key Vertical Scrolling Rhythm Game (VSRG) developed by Cyphe Mercury. In Prosody, players synchronize their actions with scrolling notes to the beat of the music. The game offers an intuitive gameplay experience with a dynamic soundtrack.<br><br>Players can compete for top rankings and claim their spot on the leaderboards. Prosody welcomes players of all skill levels, providing an inclusive space to test reflexes and enjoy the rhythm.<br><br>(Server currently down - Status : unplayable)",
+                link: "https://cyphemercury.online/Aria-Engine-Prosody/"
+            }, {
+                imageSrc: "images/4wlBanner.png",
+                title: "4-Letter Words",
+                description: "4-Letter Words is a word game developed by Cyphe Mercury for the 2023 FBLA Computer Game & Program Simulation competition, drawing inspiration from Wordle. Players aim to decipher hidden words within a 10-minute timeframe, competing on a local leaderboard.<br><br>Challenge your vocabulary skills and enjoy the competitive gameplay offered by 4-Letter Words.",
+                link: "https://schiytu37.itch.io/4-letter-words"
+            }, {
+                imageSrc: "images/moraniaIdleBanner.png",
+                title: "Morania Idle",
+                description: "Morania Idle is an incremental idle game set in the fictional world of Morania. Players progress through the game by completing quests, defeating monsters, and crafting items. The game features various mechanics such as leveling up, upgrading equipment, and unlocking new abilities. Players can gather resources, explore different regions, and engage in battles to advance. The game employs a simple interface and relies heavily on incremental progress, encouraging players to strategize and optimize their gameplay to achieve higher levels and unlock new content.",
+                link: "https://cyphemercury.online/Morania-Idle--Rewrite/"
+            }, {
+                imageSrc: "images/agiBanner.png",
+                title: "Adventurer's Guild Incremental",
+                description: "Adventurer's Guild Incremental offers players the opportunity to construct and develop their very own guild, where adventurers can be enlisted to embark on quests, gather valuable materials, and engage in combat to secure riches. Witness the growth of your guild members as they evolve, equipping themselves with gear obtained from shops or acquired through monster drops. With an emphasis on enjoyment and exploration, embark on a journey of discovery within the game's open world.",
+                link: "https://schiytu37.itch.io/adventurers-guild-incremental"
+            }, {
+                imageSrc: "images/gtrawBanner.png",
+                title: "Grinding to Rule Another World",
+                description: "An 'Idling to rule the gods' Like game, with a more rpg like twist to it.",
+                link: "https://cyphemercury.online/Grinding-to-rule-the-world/"
+            }, {
+                imageSrc: "images/craftingOdysseyBanner.png",
+                title: "Crafting Game",
+                description: "In Crafting Odyssey, players are presented with a 5x5 crafting grid and tasked with deciphering complex crafting recipes. The game features a community-driven approach to discovery, where players collaborate to uncover hidden recipes through experimentation. With an emphasis on intricate crafting mechanics, Crafting Odyssey offers an extremely challenging experience for players seeking to torture themselves.",
+                link: "https://cyphemercury.online/Crafting-Game/"
+            },
+
         ];
 
         const cardContainer = document.getElementById("cardContainer");
@@ -389,6 +213,7 @@
             closeButton.addEventListener("click", closeModal);
         }
     </script>
-    
+
 </body>
+
 </html>
